@@ -1,6 +1,9 @@
 module Lib
-    ( someFunc
+    ( someFunc, networkFunc
     ) where
 
 someFunc :: IO ()
 someFunc = putStrLn "someFunc"
+
+
+networkFunc = putStrLn ("network server")
