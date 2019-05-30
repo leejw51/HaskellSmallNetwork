@@ -5,7 +5,7 @@ import Lib
 
 main = do
     --networkFun
-    putStrLn "Haskell Small Network" 
+    putStrLn "Haskell Small Network 2019.05.30" 
     putStrLn "1. server" 
     putStrLn "2. client"
     putStrLn "q. exit"
