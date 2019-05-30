@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: ba07074a739c97e519c94e5ba33a31f47fbd327ea4ae625ba02183744c7bc65a
+-- hash: d2cb22d398429c24b85e5dde31bcfcea56778cbd3c1e41d0ee55b6e1b7de0693
 
 name:           program
 version:        0.1.0.0
@@ -28,13 +28,19 @@ source-repository head
 library
   exposed-modules:
       Lib
+      Test
   other-modules:
       Paths_program
   hs-source-dirs:
       src
   build-depends:
-      base >=4.7 && <5
+      aeson
+    , base >=4.7 && <5
+    , base-compat
+    , bytestring
     , network
+    , prelude-compat
+    , rocksdb-haskell
   default-language: Haskell2010
 
 executable program-exe
@@ -45,9 +51,14 @@ executable program-exe
       app
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      base >=4.7 && <5
+      aeson
+    , base >=4.7 && <5
+    , base-compat
+    , bytestring
     , network
+    , prelude-compat
     , program
+    , rocksdb-haskell
   default-language: Haskell2010
 
 test-suite program-test
@@ -59,7 +70,12 @@ test-suite program-test
       test
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      base >=4.7 && <5
+      aeson
+    , base >=4.7 && <5
+    , base-compat
+    , bytestring
     , network
+    , prelude-compat
     , program
+    , rocksdb-haskell
   default-language: Haskell2010
