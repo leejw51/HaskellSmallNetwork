@@ -1,5 +1,5 @@
 module Lib
-    ( someFunc, networkFunc
+    ( someFunc, networkFunc, clientFunc
     ) where
 
 import Network.Socket
@@ -13,7 +13,9 @@ import Control.Monad.Fix (fix)
 someFunc :: IO ()
 someFunc = putStrLn "someFunc"
 
-
+clientFunc = do
+    putStrLn "client" 
+    
 networkFunc = do
     putStrLn ("network server")
     sock <- socket AF_INET Stream 0

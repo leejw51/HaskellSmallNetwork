@@ -10,5 +10,8 @@ main = do
     putStrLn "2. client"
     putStrLn "q. exit"
     w <- getLine
-    if w=="q" then return () else main
+    if "q"==w then return () 
+    else if "1"==w then putStrLn("server") >> networkFunc
+    else if "2"==w then putStrLn("client") >> clientFunc
+    else main
     
